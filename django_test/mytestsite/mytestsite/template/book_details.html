@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.title }}</title>
+</head>
+<body>
+    <h1>{{ object.title }}</h1>
+    <p>Author: {{ object.author }}</p>
+    <p>Published Date: {{ object.published_date }}</p>
+    <a href="{% url 'book_detail' object.id %}">View this book</a>
+</body>
+</html>
