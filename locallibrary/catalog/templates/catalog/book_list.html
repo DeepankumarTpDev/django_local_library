@@ -16,4 +16,5 @@
     {% else %}
         <p>There is no books in the Library</p>
     {% endif %}
+    <p>You have visited this page {{ visit_count }} time{{ visit_count|pluralize }}</p>
 {% endblock %}
