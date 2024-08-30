@@ -136,3 +136,58 @@ a:hover {
       padding: 15px;
   }
 }
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the pagination controls */
+  align-items: center;
+  margin: 20px 0; /* Add some space above and below the pagination */
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+}
+
+.page-links {
+  display: inline-block;
+  font-size: 16px; /* Set a base font size */
+}
+
+.page-links a {
+  color: #007bff; /* Use a primary blue color for links */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 10px; /* Add horizontal space between links */
+  padding: 8px 12px; /* Add padding around links for better clickability */
+  border: 1px solid #007bff; /* Add a border to the links */
+  border-radius: 4px; /* Round the corners of the links */
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.page-links a:hover {
+  background-color: #007bff; /* Change the background color on hover */
+  color: white; /* Change the text color to white on hover */
+}
+
+.page-current {
+  margin: 0 10px; /* Add space on either side of the current page indicator */
+  font-weight: bold; /* Make the current page number bold */
+  color: #333; /* Set the text color to a dark gray */
+}
+
+.page-current::before,
+.page-current::after {
+  content: '|';
+  margin: 0 5px;
+  color: #ccc;
+}
+
+.pagination span {
+  display: inline-block;
+}
+
+.pagination .disabled {
+  color: #ccc; /* Set the color of disabled links to gray */
+  cursor: not-allowed; /* Change the cursor to indicate the link is disabled */
+}
+
+.pagination .disabled:hover {
+  background-color: transparent; /* Prevent any hover effect on disabled links */
+  color: #ccc; /* Ensure the color stays gray on hover */
+  border-color: #ccc; /* Change the border color to match */
+}
