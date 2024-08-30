@@ -191,3 +191,10 @@ a:hover {
   color: #ccc; /* Ensure the color stays gray on hover */
   border-color: #ccc; /* Change the border color to match */
 }
+#logout-form {
+  display: inline;
+}
+#logout-form button {
+  padding: 0;
+  margin: 0;
+}
