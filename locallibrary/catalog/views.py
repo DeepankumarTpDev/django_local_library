@@ -77,7 +77,7 @@ class BorrowedBooksByUserLibrarianListView(PermissionRequiredMixin, generic.List
     template_name = 'catalog/loaned_books_list_librarian.html'
     context_object_name = 'loaned_books'
     paginate_by = 10
-    permission_required = ('catalog.can_mark_returned', 'catalog.change_book')  # change_book => Builtin permission
+    permission_required = ('catalog.can_mark_returned')  # change_book => Builtin permission
     
     def get_queryset(self):
         return BookInstance.objects.filter(status__exact = 'o').order_by('due_back')
